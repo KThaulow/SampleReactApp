@@ -2,10 +2,18 @@ version: '3'
 services:
   web:
     build:
-      context: .
-      dockerfile: Dockerfile.dev        
+      context: . # Docker file is in current directory
+      dockerfile: Dockerfile.dev # Specify name of custom docker file        
     ports:
-      - "3000:3000"
+      - "3000:3000" # Map port from local host to port in container
     volumes:
       - /app/node_modules # Bookmark volume (do not map location)
       - .:/app # Take everything from current directory (except bookmarked volume) and map to /app      
+  tests:
+    build:
+      context: . # Docker file is in current directory
+      dockerfile: Dockerfile.dev # Specify name of custom docker file        
+    volumes:
+      - /app/node_modules # Bookmark volume (do not map location)
+      - .:/app # Take everything from current directory (except bookmarked volume) and map to /app      
+    command: ["npm", "run", "test"]
