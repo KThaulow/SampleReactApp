@@ -11,23 +11,7 @@ function App() {
           Liv siger hej til dig!
           Kristian siger også hej!
           Hejsa!
-        </p>
-        <p>
-          Hejsa!
-        </p>
-
-        <p>
-          Hejsa!
-        </p>
-        <p>
-          Hejsa!
-        </p>
-        <p>
-          Hejsa!
-        </p>
-        <p>
-          Hejsa!
-        </p>
+        </p>       
         <a
           className="App-link"
           href="https://reactjs.org"
