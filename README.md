@@ -1,3 +1,5 @@
+## Test Status
+
 [![Build Status](https://travis-ci.org/KThaulow/SampleReactApp.svg)](https://travis-ci.org/KThaulow/SampleReactApp)
 
 
