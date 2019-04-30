@@ -5,5 +5,6 @@ services:
 before_install:
   - docker build -f Dockerfile.dev -t thaulow/samplereactapp .
 
+# Script for running test
 script:
   - docker run -e CI=true thaulow/samplereactapp npm run test
