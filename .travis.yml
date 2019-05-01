@@ -2,9 +2,24 @@ sudo: required
 services:
   - docker
 
+# Build docker image
 before_install:
   - docker build -f Dockerfile.dev -t thaulow/samplereactapp .
 
-# Script for running test
+# Run tests
 script:
   - docker run -e CI=true thaulow/samplereactapp npm run test
+
+# Deployment to AWS
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-655430376816"
+  bucket_path: "docker-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"
