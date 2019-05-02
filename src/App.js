@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './Liv.js'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           Liv siger hej til dig!
           Kristian siger også hej!
           Hejsa!
+          Changed on feature branch.
         </p>       
         <a
           className="App-link"
@@ -24,5 +26,8 @@ function App() {
     </div>
   );
 }
+
+
+
 
 export default App;
