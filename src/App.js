@@ -11,6 +11,7 @@ function App() {
           Liv siger hej til dig!
           Kristian siger også hej!
           Hejsa!
+          Changed on feature branch.
         </p>       
         <a
           className="App-link"
@@ -24,5 +25,8 @@ function App() {
     </div>
   );
 }
+
+
+
 
 export default App;
